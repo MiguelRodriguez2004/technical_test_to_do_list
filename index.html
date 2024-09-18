@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="./libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">Listado de tareas</h1>
+
+    <a href="historial_tareas.html" class="btn btn-secondary mt-3">Ver Reporte de Tareas</a>
+
+    <form id="formCrearTarea" class="mt-4 mb-4">
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="descripcionTarea" placeholder="Ingresa tu tarea!" maxlength="180" required>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary w-100">Crear Tarea</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Fecha de Creación</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaTareas">
+        </tbody>
+    </table>
+</div>
+
+<script src="./js/app.js"></script>
+<script src="./libs/js/sweetAlert2.js"></script>
+</body>
+</html>
+
+
